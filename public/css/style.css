@@ -1,0 +1,359 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.s-main-carousel-container .carousel {
+  overflow-y: visible;
+  height: calc(100vh - 48px) !important;
+}
+
+.s-common-tab-div-content {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-left: 10%;
+  margin-top: 20px;
+}
+.s-image {
+  width: auto !important;
+  max-height: 600px;
+}
+/* old css .. should remove a lot */
+
+/*Should be moved to another file*/
+      body {
+        /*background: #efefef;*/
+        /*color: #404040;*/
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .row {
+        margin: 0px;
+      }
+      .mainOuterContainer {
+        display: none;
+        /*padding: 30px;*/
+      }
+      /*h3 {
+        color: #eee;
+      }*/
+      .leftNavContainer {
+          /* color: white; */
+          min-height: 100%;
+          margin-bottom: 15px;
+          /*background: #293d3d;*/
+          /*background: #293D4D;*/
+          background: white;
+          /*box-shadow: 1px 1px 2px -1px #0099cc;*/
+          /*color: white;*/
+          min-height: 100vh;
+          border-right: solid 1px #eee;
+          padding: 0;
+          z-index: 100;
+      }
+      .rightDataContainer {
+        background: white;
+        margin: 15px;
+        display: none;
+        padding-bottom: 15px;
+      }
+      .myImageContainer {
+        width: 100%;
+        /*margin-top: 15px !important;*/
+      }
+      .sampleContainer {
+        border: solid 1px #0099cc;
+          padding: 8px;
+          color: #293d3d;
+          box-shadow: 0px 2px 14px -4px #003333;
+      }
+      @-webkit-keyframes myrotate {
+        from{transform: rotateX(0deg);}
+        to{transform: rotateX(180deg);}
+      }
+      @keyframes myrotate {
+        from{transform: rotateX(0deg);}
+        to{transform: rotateX(180deg);}
+      }
+      .loaderContainer {
+        margin: 10px auto;
+          width: 100px;
+          height: 100px;
+          /*left: 40%;*/
+          margin-top: 14%;
+          top: 40%;
+          /*background: #0099cc;*/
+          border: solid 2px #0099cc;
+          position: relative;
+          border-radius: 50%;
+          width: 108px;
+          height: 100px;
+          /*transition-timing-function: cubic-bezier;*/
+          -webkit-animation: mymove 1s;  /* Chrome, Safari, Opera */
+          -webkit-animation-iteration-count: infinite;  /* Chrome, Safari, Opera */
+          animation: mymove 1s;
+          animation-iteration-count: infinite;
+          -webkit-animation-delay: 0s; /* Chrome, Safari, Opera */
+          animation-delay: 0s;
+          background: #0099cc;
+      }
+      .loaderContainer p {
+        vertical-align: middle;
+          text-align: center;
+          color: white;
+          font-weight: 800;
+          font-size: 31px;
+          line-height: 96px;
+      }
+      @-webkit-keyframes mymove {
+          from {transform: rotateX(0deg);}
+          to {transform: rotateX(360deg);}
+      }
+      @keyframes mymove {
+          from {transform: rotateX(0deg);}
+          to {transform: rotateX(360deg);}
+      }
+      .nav-links-flex-container {
+            display: -webkit-flex;
+          display: flex;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          /*margin-bottom: 15px;*/
+          /* background-color: lightgrey; */
+      }
+      .nav-links-flex-item {
+            width: inherit;
+          height: 40px;
+          /* margin-top: 10px; */
+          text-align: center;
+          padding-right: 0px;
+          /* background: #0099A0; */
+          color: #0099cc;
+          border-bottom: solid 1px #eee;
+          cursor: pointer;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+      /*.nav-links-flex-item:before {
+          content: '';
+          position: absolute;
+          top: 0px;
+          width: 0%;
+          height: 100%;
+          left: 0px;
+          background: #7a55a3;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+      }*/
+      .nav-links-flex-item:hover {
+        background: #0099cc;
+      }
+      /*.nav-links-flex-item a {
+        color: #eee;
+          font-size: 14px;
+          text-decoration: none;
+          font-family: sans-serif;
+          line-height: 20px;
+      }*/
+      .nav-links-flex-item:hover {
+        color: white;
+      }
+      .commonHeader {
+        color: #0099cc;
+        border-bottom: solid 1px #eee;
+          padding-bottom: 5px;
+          font-size: 19px;
+      }
+      .commonGlyphicon {
+        padding: 25px;
+          margin: 5px;
+          font-size: 20px;
+          border: solid 1px #eee;
+          border-radius: 50%;
+          color: #0099cc;
+          -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+      .commonGlyphicon:hover {
+        color: #fff;
+        background: #0099cc;
+        border: solid 1px #0099cc;
+        -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          -ms-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+      }
+      .headingFooter {
+        display: block;
+          font-size: 12px;
+          font-style: italic;
+          margin-top: 4px;
+          font-weight: 600;
+          color: #8c8c8c;
+          margin-bottom: 2px;
+      }
+      .emailTemplateContainer {
+        width: 100%;
+          height: 100%;
+          background: #f5f5f5;
+          /* border-radius: 30px; */
+          margin: 10px 0 10px 0;
+          padding: 15px;
+      }
+      .emailButtonsContainer {
+          padding: 10px 0px 10px 0px;
+          margin: 10px 0px 10px 0px;
+      }
+      .emailButtonContent {
+        padding: 0px 15px 0px 0px;
+      }
+      .emailButtonContent input {
+        min-height: 40px;
+      }
+      .emailButtonContent button {
+        min-height: 40px;
+      }
+      .emailButtonsContainer .primaryButton {
+        height: 40px;
+      }
+      .homePageContent {
+        padding-top: 20px;
+        background: ;
+        min-height: 200px;
+        background: #0099cc; /* For browsers that do not support gradients */
+          background: -webkit-linear-gradient(left top, #0099cc, #f5f5f5, ); /* For Safari 5.1 to 6.0 */
+          background: -o-linear-gradient(bottom right, #0099cc, #f5f5f5); /* For Opera 11.1 to 12.0 */
+          background: -moz-linear-gradient(bottom right, #0099cc, #f5f5f5); /* For Firefox 3.6 to 15 */
+          background: linear-gradient(to bottom right, #0099cc, #f5f5f5); /* Standard syntax (must be last) */
+      }
+      .homePageContent h2 {
+          text-align: center;
+          font-size: 29px;
+          color: #e6ffff;
+      }
+      .homePageContent h3 {
+          text-align: center;
+          font-size: 17px;
+          color: #eee;
+          font-style: italic;
+      }
+      .homePageContentHaves {
+        padding-top: 18px;
+        text-align: center;
+          color: #29888E;
+          font-size: 17px;
+      }
+      .homePageContentInfo {
+          background: #F1F1FA;
+          min-height: 100%;
+          margin-top: 15px;
+          border-left: solid 3px #0099cc;
+          padding: 10px;
+      }
+      .homePageContentRow {
+        padding-top: 10px;
+      }
+      .homePageSideHeading {
+        color: #8c8c8c;
+        font-weight: bold;
+        padding: 0;
+      }
+      .homePageValue {
+        color: #8c8c8c;
+      }
+      .homePageContent 
+      /*Generic css*/
+      .paddingZero {
+        padding: 0 !important;
+      }
+      .marginTop {
+        margin-top: 10px;
+      }
+      .textAlignCenter {
+        text-align: center;
+      }
+      .circularBorderRadius {
+        -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -o-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%;
+      }
+      .zeroBorderRadius {
+        -webkit-border-radius: 0px;
+          -moz-border-radius: 0px;
+          -o-border-radius: 0px;
+          -ms-border-radius: 0px;
+          border-radius: 0px;
+      }
+      .primaryButton {
+        width: 100%;
+        background: #0099cc;
+        border: none;
+      }
