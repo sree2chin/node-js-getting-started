@@ -71,6 +71,12 @@ footer.page-footer {
 .s-image {
   width: auto !important;
   max-height: 600px;
+  display:block;
+  border-left: solid 20px #5d5656;
+  border-top: solid 20px #524c4c;
+  border-right: solid 20px #443f3f;
+  border-bottom: solid 20px #4a4646;
+  margin: 20px auto;
 }
 
 .s-people-one {
