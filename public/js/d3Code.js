@@ -84,7 +84,7 @@
           .duration(2000)
           .ease("linear")
           .attr("stroke-dashoffset", 0);
-        },100);
+        },0);
         
       });
 
