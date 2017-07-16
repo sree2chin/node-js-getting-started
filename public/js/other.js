@@ -33,15 +33,16 @@ $( document ).ready(function() {
 	    }
 	    $(document).on("click",".s-clickable-image",function() {
 	    	var newSrc = $(this)[0].src;
-	    	$('#s-dynamic-img-href').attr('href', newSrc);
-	    	$('.s-dynamic-image').removeClass("s-clickable-image-open");
-	    	$('.s-dynamic-image').addClass("s-clickable-image-close");
-	    	setTimeout(function(){
-	    		$('.s-dynamic-image').attr("src", newSrc);
-	    		$('.s-dynamic-image').removeClass("s-clickable-image-close");
-	    		$('.s-dynamic-image').addClass("s-clickable-image-open");
-	    	},500)
-	    	
+	    	if($('.s-dynamic-image').attr("src") != newSrc) {
+	    		$('#s-dynamic-img-href').attr('href', newSrc);
+		    	$('.s-dynamic-image').removeClass("s-clickable-image-open");
+		    	$('.s-dynamic-image').addClass("s-clickable-image-close");
+		    	setTimeout(function(){
+		    		$('.s-dynamic-image').attr("src", newSrc);
+		    		$('.s-dynamic-image').removeClass("s-clickable-image-close");
+		    		$('.s-dynamic-image').addClass("s-clickable-image-open");
+		    	},500)
+	    	}
 	    });
 	}, 100)  
 
