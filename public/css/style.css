@@ -192,6 +192,46 @@ footer.page-footer {
   box-shadow: 1px 1px 8px 1px #eee;
   transform: scale(1.1,1.1);
 }
+
+.s-clickable-image {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.s-clickable-image-close {
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    -ms-transition: transform 0.5s linear;
+    -o-transition: transform 0.5s linear;
+    transition: transform 0.5s linear;
+    transform: rotate(360deg) scale(0,0);
+}
+
+.s-clickable-image-open {
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    -ms-transition: transform 0.5s linear;
+    -o-transition: transform 0.5s linear;
+    transition: transform 0.5s linear;
+    transform: rotate(0deg) scale(1,1);
+}
+
+.s-grid-outer-container {
+  overflow-x: scroll;
+}
+
+.s-dynamic-image {
+  max-width: 100%;
+  height: calc(100vh - 150px) !important;
+  border-left: solid 5px #5d5656;
+    border-top: solid 5px #524c4c;
+    border-right: solid 5px #443f3f;
+    border-bottom: solid 5px #4a4646;
+    margin: 5px auto;
+}
+
 /* graph css */
 path { 
     stroke: steelblue;
