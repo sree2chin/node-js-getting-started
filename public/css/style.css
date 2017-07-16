@@ -178,7 +178,7 @@ footer.page-footer {
   background: #f9f9f9;
 }
 
-#test-swipe-1 .light {
+#test-swipe-2 .light {
   background: white;
     border-radius: 8px;
     padding: 10px;
@@ -188,7 +188,7 @@ footer.page-footer {
   -o-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
   transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
 }
-#test-swipe-1 .light:hover {
+#test-swipe-2 .light:hover {
   -webkit-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
   -moz-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
   -ms-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
