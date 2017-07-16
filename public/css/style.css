@@ -59,6 +59,7 @@ footer.page-footer {
 .s-main-carousel-container .carousel {
   overflow-y: visible;
   height: calc(100vh - 48px) !important;
+  background: #f9f9f9;
 }
 
 .s-common-tab-div-content {
@@ -149,6 +150,10 @@ footer.page-footer {
     background: #f5f5f5;
     padding: 5px;
     color: #efabab;
+}
+
+#farmers-graph svg {
+  padding: 5px;
 }
 
 .s-main-carousel-container .tabs .tab a {
@@ -253,7 +258,7 @@ footer.page-footer {
 
 .s-dynamic-image {
   max-width: 100%;
-  height: calc(100vh - 150px) !important;
+  max-height: calc(100vh - 150px) !important;
   border-left: solid 5px #5d5656;
     border-top: solid 5px #524c4c;
     border-right: solid 5px #443f3f;

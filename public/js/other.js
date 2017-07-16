@@ -18,6 +18,7 @@ var imagesList = [
 	"http://i68.tinypic.com/2lt4x05.jpg",
 	"http://i68.tinypic.com/4ubd5y.jpg",
 	"http://i65.tinypic.com/10e1sfq.jpg",
+	"http://i64.tinypic.com/2010pw9.jpg"
 ]
 
 $( document ).ready(function() {
