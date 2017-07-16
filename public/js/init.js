@@ -5,7 +5,7 @@
     
     // Swipeable Tabs Demo Init
     if ($('#tabs-swipe-demo').length) {
-      $('#tabs-swipe-demo').tabs({ 'swipeable': true });
+      $('#tabs-swipe-demo').tabs({ 'swipeable': false });
     }
     $(document).ready(function(){
       $('.s-img-carousel').carousel();

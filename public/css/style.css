@@ -337,7 +337,7 @@ path {
 
 /*Should be moved to another file*/
       body {
-        /*background: #efefef;*/
+        background: #f9f9f9;
         /*color: #404040;*/
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
