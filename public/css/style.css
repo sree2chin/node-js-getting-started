@@ -141,6 +141,10 @@ footer.page-footer {
 .s-money-container {
   position: relative;
 }
+.s-main-container {
+  margin-top: 70px;
+}
+
 .s-money {
     position: absolute;
     left: 62px;
@@ -172,6 +176,9 @@ footer.page-footer {
   border-bottom: solid 1px #ededf5;
     /*background-color: #eeeef5;*/
     box-shadow: 1px 1px 6px 0px #eee;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
 }
 
 .s-main-carousel-container .tabs-content .carousel-item {
