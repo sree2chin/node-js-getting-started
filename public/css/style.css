@@ -314,6 +314,12 @@ footer.page-footer {
   top:0px;
 }
 
+.s-grid-outer-container {
+  -moz-box-shadow: inset 0 0 2px #54656d;
+    -webkit-box-shadow: inset 0 0 2px #54656d;
+    box-shadow: inset 0 0 2px #54656d;
+}
+    
 /* cube css */
 
 .wrap {
