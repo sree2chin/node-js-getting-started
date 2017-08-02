@@ -39,6 +39,12 @@ p {
   }
 }
 
+@media only screen and (min-width : 721px) {
+  .s-image-margin-special {
+    margin-top: 100vh !important;
+  }
+}  
+
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
@@ -234,7 +240,23 @@ footer.page-footer {
     -ms-transition: transform 0.5s linear;
     -o-transition: transform 0.5s linear;
     transition: transform 0.5s linear;
-    transform: rotate(360deg) scale(0,0);
+    /*transform: rotate(360deg) scale(0,0);*/
+    transform: perspective(1000px) rotateY(-90deg);
+    transform-origin: left;
+}
+
+.s-clickable-image-close-new {
+    transform: perspective(1000px) rotateY(-90deg);
+    transform-origin: left;
+}
+
+.s-clickable-image-close-new {
+    transform: perspective(1000px) rotateY(-90deg);
+    transform-origin: left;
+}
+
+.s-clickable-image-dum {
+    transform: perspective(1000px) rotateY(90deg) !important;
 }
 
 .s-clickable-image-open {
@@ -243,7 +265,9 @@ footer.page-footer {
     -ms-transition: transform 0.5s linear;
     -o-transition: transform 0.5s linear;
     transition: transform 0.5s linear;
-    transform: rotate(0deg) scale(1,1);
+    /*transform: rotate(0deg) scale(1,1);*/
+    transform: perspective(1000px) rotateY(0deg);
+    transform-origin: right;
 }
 
 .s-grid-outer-container {
@@ -255,6 +279,7 @@ footer.page-footer {
 
 #s-dynamic-img-href {
   display:block;
+  position:relative;
 }
 
 @media only screen and (max-width: 720px) {
@@ -270,17 +295,30 @@ footer.page-footer {
   max-width: 100%;
   max-height: calc(100vh - 150px) !important;
   border-left: solid 5px #5d5656;
-    border-top: solid 5px #524c4c;
-    border-right: solid 5px #443f3f;
-    border-bottom: solid 5px #4a4646;
-    margin: 5px auto;
+  border-top: solid 5px #524c4c;
+  border-right: solid 5px #443f3f;
+  border-bottom: solid 5px #4a4646;
+  margin: 5px auto;
+  position:absolute;
+  top:0px;
+}
+.s-dynamic-image2 {
+  max-width: 100%;
+  max-height: calc(100vh - 150px) !important;
+  border-left: solid 5px #5d5656;
+  border-top: solid 5px #524c4c;
+  border-right: solid 5px #443f3f;
+  border-bottom: solid 5px #4a4646;
+  margin: 5px auto;
+  position:absolute;
+  top:0px;
 }
 
 /* cube css */
 
 .wrap {
   perspective: 80px;
-    perspective-origin: 50% 10px;
+  perspective-origin: 50% 10px;
 }
 
 .cube {
