@@ -25,6 +25,8 @@ var imagesList = [
 
 var currentImage = "s-dynamic-image";
 
+var i = 1;
+
 $('.s-dynamic-image2').addClass("s-clickable-image-dum");
 
 $( document ).ready(function() {
@@ -71,5 +73,11 @@ $( document ).ready(function() {
 	    	}
 	    });
 	}, 100)  
+	
+	setInterval(function() {
+		$(".s-log-each-row").removeClass("s-log-each-row-bg");
+		$(".s-log-each-row-log-" + ((i++)%4)).addClass("s-log-each-row-bg");
+		if(i>4) { i = 1;}
+	}, 2000)
 
 });
