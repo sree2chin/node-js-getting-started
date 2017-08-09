@@ -289,6 +289,9 @@ footer.page-footer {
     #s-dynamic-img-href {
       display:none;
     }
+    .s-log-outer-container {
+      display: none;
+    }
 }
 
 .s-dynamic-image {
