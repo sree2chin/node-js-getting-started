@@ -76,8 +76,8 @@ $( document ).ready(function() {
 	
 	setInterval(function() {
 		$(".s-log-each-row").removeClass("s-log-each-row-bg");
-		$(".s-log-each-row-log-" + ((i++)%4)).addClass("s-log-each-row-bg");
-		if(i>4) { i = 1;}
+		$(".s-log-each-row-log-" + ((i++)%5)).addClass("s-log-each-row-bg");
+		if(i>5) { i = 1;}
 	}, 2000)
 
 });
