@@ -213,8 +213,8 @@ footer.page-footer {
 }
 
 .s-clickable-image {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     cursor: pointer;
     object-fit: contain;
     -webkit-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
@@ -333,6 +333,10 @@ footer.page-footer {
 
 .s-log-inner-container {
   /*width: 50%;*/
+}
+
+.s-grid-inner-container {
+  margin: auto;
 }
 
 .s-log-each-row {

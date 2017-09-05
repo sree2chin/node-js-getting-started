@@ -33,7 +33,7 @@ $( document ).ready(function() {
 	setTimeout(function(){
 		var imagesListLength = imagesList.length;
 	     //Equivalent: $(document.createElement('img'))
-		$('.s-grid-inner-container').css("width", (imagesListLength*50)+"px");
+		$('.s-grid-inner-container').css("width", (imagesListLength*40)+"px");
 	    for(var i = 0; i < imagesListLength; i++) {
 	    	var img = $('<img class = "s-clickable-image">');
 	    	img.attr('src', imagesList[i]);
