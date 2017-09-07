@@ -273,8 +273,8 @@ footer.page-footer {
 .s-grid-outer-container {
   overflow-x: scroll;
   display:block;
-
-    padding-top: 5px;
+  min-height: 40px;
+  padding-top: 5px;
 }
 
 #s-dynamic-img-href {
