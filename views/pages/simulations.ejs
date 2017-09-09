@@ -11,12 +11,100 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/simulation.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script>
-    var binarySearch = function(list, start, end) {
+   //  var binarySearch = function(list, start, end) {
 
-    }
-  	var list = [3, 4, 8, 12, 23, 34, 44, 56, 67, 100];
-  	var index = binarySearch(list, 0, list.length-1);
+   //  }
+  	// var list = [3, 4, 8, 12, 23, 34, 44, 56, 67, 100];
+  	// var index = binarySearch(list, 0, list.length-1);
+  	var interval = 2000;
+  	var N = 5;
+  	var n = 2;
+  	var res = N;
+  	var populateResult = function(result) {
+  		result = result;
+  		console.log("sum of "+ N + "numbers : ", result);
+  	}
+  	// Promise example
+  	var country = "spain";
+  	var promiseOfImageName = new Promise(function(resolve, reject) {
+	  setTimeout(function() {
+	    if (country === 'spain' || country === 'chile' || country === 'peru') {
+	      resolve(country + '.png');
+	    } else {
+	      reject(Error('Didn\'t receive a valid country name!'));
+	    }
+	  }, 1000);
+	});
+	promiseOfImageName.then(function(results){
+		console.log("promiseOfImageName:", results);
+	})
+	var outern = N;
+	var appendDiv = function(n) {
+		var $div = $('<div class = "s-rec-call-block" id = "s-rec-'+n+'">');
+
+    	$div.text("calls findSumOfNaturalNumbers(" + n + ")");
+    	$(".s-rec-call-stack").append($div);
+	}
+	var normalFindSum = function(n) {
+		var s = 0;
+		for(var i = 1; i <= n; i++) {
+			s = s + i;
+		}
+		return s;
+	}
+	var revertDivs = function() {
+		var j = 1;
+		for(var i = 1; i <= N; i++) {
+
+			setTimeout(function(){
+				setTimeout(function(){
+					$('#s-rec-'+(j)).css("background","red");
+					$('#s-rec-'+(j)).text("returns: "+normalFindSum(j-1) + " + " + j );
+				}, interval/2)
+				
+				$('#s-rec-'+(j)).remove();
+				if(j == N) {
+					$('.s-rec-result').text(normalFindSum(j));
+				}
+				j++;
+			}, i*interval)
+		}
+	}
+  	var findSumOfNaturalNumbers = function(n) {
+  		// console.log("coming to findSumOfNaturalNumbers");
+  		return new Promise(function (resolve) {
+	        setTimeout(function(){
+	  			// appending div
+	  			appendDiv(n);
+	  			if(n == 1) {
+	  				// console.log("coming: ", n);
+		  			resolve(1);
+		  		} else {
+		  			// console.log("coming else : ", n);
+		  			outern = n - 1;
+		  			resolve(n-1); 
+		  		}
+	  		}.bind(this), interval) 
+	    }).then(function (result) {
+	    	res = res + result;
+	    	if(result != 1) {
+	        	findSumOfNaturalNumbers(result);
+	        } else {
+	        	setTimeout(function(){
+	        		appendDiv(1);
+	        		revertDivs();
+	        	}, interval)
+	        	console.log("finished")
+	        }
+	        console.log('res:', res);
+	    }).catch(function(error){
+	    	console.log("error", error);
+	    });
+  					
+  	}
+  	findSumOfNaturalNumbers(N);
 
   </script>
 
@@ -26,8 +114,24 @@
 
 
 <div class = "row">
-	<h6>Binary Search:</h6>
+	<h5>Understand recursion (sum of n natural numbers):</h5>
+	<div class = "s-rec-simulation-container">
+		<div class = "s-rec-call-code">
+			Code: <br>
 
+			<p class = "s-code-line">var findSumOfNaturalNumbers = function(n) { </p>
+		  		<p class = "s-code-line">if(n == 1) { </p>
+		  			<p class = "s-code-line">return 1; </p>
+		  		<p class = "s-code-line">} else {</p>
+		  			<p class = "s-code-line">return findSumOfNaturalNumbers(n-1) + n; </p>
+		  		<p class = "s-code-line">} </p>
+		  	}
+		</div>
+		<div class = "s-rec-call-stack">
+		
+		</div>
+		<h6>Final result: <span class = "s-rec-result"></span></h6>
+	</div>
 
 </div>
 
@@ -371,9 +475,6 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/other.js"></script>
-  <!-- load the d3.js library -->    
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="js/d3Code.js"></script>
 
   </body>
 </html>

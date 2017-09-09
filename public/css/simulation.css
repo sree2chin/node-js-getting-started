@@ -1,0 +1,34 @@
+/*rec simulation*/
+
+.s-rec-simulation-container {
+	height: auto;
+}
+.s-code-line {
+	line-height: 8px;
+    /* height: 0px; */
+    font-size: 13px;
+}
+.s-rec-call-block {
+	background: #8eabf1;
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+    padding-left: 5px;
+    color: white;
+}
+.s-rec-call-code {
+	display: inline-block;
+    width: 300px;
+    height: 290px;
+    background-color: #ebeef5;
+    padding: 10px;
+}
+.s-rec-call-stack {
+	background: #eee;
+    height: 290px;
+    width: 300px;
+    float: right;
+    padding:10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
