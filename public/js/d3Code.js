@@ -13,10 +13,14 @@
 
     // Define the axes
     var xAxis = d3.svg.axis().scale(x)
-        .orient("bottom").ticks(5);
+        .orient("bottom")
+        .ticks(5)
+        .tickSize(-(height - margin.top - margin.bottom, height));
 
     var yAxis = d3.svg.axis().scale(y)
-        .orient("left").ticks(5);
+        .orient("left")
+        .ticks(5)
+        .tickSize(-width, 0);
 
     // Define the line
     var valueline = d3.svg.line()

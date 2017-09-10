@@ -18,7 +18,7 @@
   
   <div class = "s-main-carousel-container"> 
     <ul id="tabs-swipe-demo" class="tabs" style = "text-align: center;">
-      <li class="tab col s3">
+      <li class="tab col s3 s-common-tab">
         <a class="active" href="#test-swipe-1">ARTS</a>
         <!-- <a class="active" href="#test-swipe-1">
           <div class="wrap">
@@ -47,15 +47,16 @@
           </div>
         </a> -->
       </li>
-      <li class="tab col s3"><a href="#test-swipe-2">Writes</a></li>
-      <li class="tab col s3">
-        <a href="#test-swipe-3">
+      <li class="tab col s3 s-common-tab"><a href="#test-swipe-2">Writes</a></li>
+      <li class="tab col s3 s-common-tab">
+        <a href="#test-swipe-3 ">
           Who Am I
         </a>
       </li>
-      <li class="tab col s3"><a href="#test-swipe-4">Resume</a></li>
-      <li class="tab col s3 s-to-solve-tab"><a href="#test-swipe-5">To solve</a></li>
-      <li class="tab col s3"><a href="#test-swipe-6">Portfolio</a></li>
+      <li class="tab col s3 s-common-tab"><a href="#test-swipe-4">Resume</a></li>
+      <li class="tab col s3 s-common-tab s-to-solve-tab"><a href="#test-swipe-5">To solve</a></li>
+      <li class="tab col s3 s-common-tab s-portfolio-tab"><a href="#test-swipe-6">Portfolio</a></li>
+      <li class="tab col s3 s-common-tab"><a href="#test-swipe-7">In Tune</a></li>
     </ul>
     <div id="test-swipe-1" class="col s12 s-main-container" style = "width:100%;">
       <div class = "s-common-tab-div-content">
@@ -199,7 +200,7 @@
             As of 2017, one Indian farmer commits suicide every 30 minutes, due to a number of reasons including inadequate prices at the market, lack of government support, an extremely low government MSP (Minimum support price) and the vicious spiral of private money lenders and loans that the farmer is unable to pay back due to the above.
           </p>
           <div id = 'farmers-graph'></div>
-          <h4>Poverty: </h4>
+          <h4 class = "s-to-solve-sub-header">Poverty: </h4>
           <p class = "light">
             India has the second highest unequal economic distribution after Russia, where 74.5% of the country’s wealth is owned by the top 1% population.
           </p>
@@ -225,21 +226,27 @@
           <p class = "light">
             Top 10% own 80.7% of the wealth.
           </p>
-        <h4>
+        <h4 class = "s-to-solve-sub-header">
           Environment
-
-          
         </h4>
         <div>
           <iframe width="500px" height="400"
           src="https://www.youtube.com/embed/nLVdqnQPS7c">
           </iframe>
         </div>
-        <h4>
+        <div>
+          <a href = "http://isha.sadhguru.org/rally-for-rivers/" target = "blank">
+            <img src = "http://isha.sadhguru.org/rally-for-rivers/wp-content/uploads/2017/08/RallyforRiver_Logo.png" alt = "Rally for rivers"/>
+          <a/>
+          <div>
+            <a href = "http://isha.sadhguru.org/rally-for-rivers/" target = "blank"> Our rivers are dying. Click here to save</a>
+          </div>
+        </div>
+        <h4 class = "s-to-solve-sub-header">
           Health
         </h4>
         
-        <h4>
+        <h4 class = "s-to-solve-sub-header">
           Education
         </h4>
       </div>
@@ -302,6 +309,10 @@
 
           </div>
       </div>
+      <div id="test-swipe-7" class="col s12 s-main-container" style = "width:100%;">
+          <% include partials/intune %>
+      </div>
+
     </div>
   </div>
 

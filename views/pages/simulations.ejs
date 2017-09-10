@@ -37,6 +37,7 @@
 			setTimeout(function(){
 				setTimeout(function(){
 					$('#s-rec-'+(j)).css("background","#ccb4bb");
+					$('#s-rec-'+(j)).addClass("s-rec-down-arrow");
 					$('#s-rec-'+(j)).text("returns: "+normalFindSum(j-1) + " + " + j );
 				}, interval/2)
 				
@@ -90,7 +91,7 @@
 
 </head>
 <body class = "s-common-tab-div-content">
-<h3 style = "text-align: center;" class = "s-simulations-heading">Simulations</h3>
+<h3 style = "text-align: center;" class = "s-simulations-heading"> <a href = "/" style = "font-size: 18px; float: left;">Go home</a>Simulations for beginners </h3>
 
 <div class = "row">
 	<h5 style = "font-size: 18px;">Understand recursion (sum of n natural numbers):</h5>
@@ -110,7 +111,7 @@
 		<div class = "s-rec-call-stack-outer">
 			<h4 class = "s-rec-block-heading">Call stack</h4>
 			<div class = "s-rec-call-stack">
-			
+				
 			</div>
 		</div>
 		<div class = "s-rec-call-stack-outer">
@@ -156,266 +157,39 @@
 	  </div>
 	  <div class = "s-log-each-row s-log-each-row-3" style = "width: 64px;">
 	    <div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
+	    	<% for(var i = 0; i < 7; i++) { %>
+	    		</div><div class = "s-small-box">
+	    	<% } %>
 	    </div>
 	  </div>
 	  
 	  <div class = "s-log-each-row s-log-each-row-1" style = "width: 128px;">
 	    <div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
+	    	<% for(var i = 0; i < 15; i++) { %>
+	    		</div><div class = "s-small-box">
+	    	<% } %>
 	    </div>
 	  </div>
 	  <div class = "s-log-each-row s-log-each-row-2" style = "width: 256px;">
 	    <div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
+	    	<% for(var i = 0; i < 31; i++) { %>
+	    		</div><div class = "s-small-box">
+	    	<% } %>
+	    
 	    </div>
 	  </div>
 	  <div class = "s-log-each-row s-log-each-row-3" style = "width: 512px;">
 	    <div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
+	    	<% for(var i = 0; i < 63; i++) { %>
+	    		</div><div class = "s-small-box">
+	    	<% } %>
 	    </div>
 	  </div>
 	  <div class = "s-log-each-row s-log-each-row-0" style = "width: 1024px;">
 	    <div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
+	    	<% for(var i = 0; i < 127; i++) { %>
+	    		</div><div class = "s-small-box">
+	    	<% } %>
 	    </div>
 	  </div>
 	  <p style = "text-align: center">.</p>
@@ -427,31 +201,15 @@
 	  <h6 class = "s-log-inner-heading">Logarithmic <sub> base 2</sub></h6>  
 	  <div class = "s-log-each-row s-log-each-row-log-1" style = "width: 128px;">
 	    <div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
+	    	<% for(var i = 0; i < 15; i++) { %>
+	    		</div><div class = "s-small-box">
+	    	<% } %>
 	    </div>
 	  </div><div class = "s-log-each-row s-log-each-row-log-2" style = "width: 64px;">
 	    <div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
-	    </div><div class = "s-small-box">
+	    	<% for(var i = 0; i < 7; i++) { %>
+	    		</div><div class = "s-small-box">
+	    	<% } %>
 	    </div>
 	  </div><div class = "s-log-each-row s-log-each-row-log-3" style = "width: 32px;">
 	    <div class = "s-small-box">
