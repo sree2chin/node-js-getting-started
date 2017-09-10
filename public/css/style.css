@@ -206,7 +206,7 @@ footer.page-footer {
     box-shadow: 1px 1px 6px 0px #eee;
   position: fixed;
   top: 0px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .s-main-carousel-container .tabs-content .carousel-item {
@@ -441,6 +441,7 @@ footer.page-footer {
     background: white;
     padding: 10px;
     box-shadow: 1px 1px 6px 1px #eee;
+    width: 640px;
 }
 
 .s-to-solve-sub-header {
