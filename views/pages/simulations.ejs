@@ -13,37 +13,14 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/simulation.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script>
-   //  var binarySearch = function(list, start, end) {
-
-   //  }
-  	// var list = [3, 4, 8, 12, 23, 34, 44, 56, 67, 100];
-  	// var index = binarySearch(list, 0, list.length-1);
   	var interval = 2000;
   	var N = 10;
   	var n = 2;
   	var res = N;
-  	var populateResult = function(result) {
-  		result = result;
-  		console.log("sum of "+ N + "numbers : ", result);
-  	}
-  	// Promise example
-  	var country = "spain";
-  	var promiseOfImageName = new Promise(function(resolve, reject) {
-	  setTimeout(function() {
-	    if (country === 'spain' || country === 'chile' || country === 'peru') {
-	      resolve(country + '.png');
-	    } else {
-	      reject(Error('Didn\'t receive a valid country name!'));
-	    }
-	  }, 1000);
-	});
-	promiseOfImageName.then(function(results){
-		console.log("promiseOfImageName:", results);
-	})
-	var outern = N;
+  	var isEnabled = true;
+
 	var appendDiv = function(n) {
 		var $div = $('<div class = "s-rec-call-block" id = "s-rec-'+n+'">');
-
     	$div.text("calls findSumOfNaturalNumbers(" + n + ")");
     	$(".s-rec-call-stack").append($div);
 	}
@@ -57,36 +34,36 @@
 	var revertDivs = function() {
 		var j = 1;
 		for(var i = 1; i <= N; i++) {
-
 			setTimeout(function(){
 				setTimeout(function(){
-					$('#s-rec-'+(j)).css("background","red");
+					$('#s-rec-'+(j)).css("background","#ccb4bb");
 					$('#s-rec-'+(j)).text("returns: "+normalFindSum(j-1) + " + " + j );
 				}, interval/2)
 				
 				$('#s-rec-'+(j)).remove();
 				if(j == N) {
 					$('.s-rec-result').text(normalFindSum(j));
+					isEnabled = true;
+					$(".s-run-btn").attr("disabled", false);
 				}
 				j++;
 			}, i*interval)
 		}
 	}
   	var findSumOfNaturalNumbers = function(n) {
+  		isEnabled = false;
+  		$(".s-run-btn").attr("disabled", true);
   		// console.log("coming to findSumOfNaturalNumbers");
   		return new Promise(function (resolve) {
 	        setTimeout(function(){
 	  			// appending div
 	  			appendDiv(n);
 	  			if(n == 1) {
-	  				// console.log("coming: ", n);
 		  			resolve(1);
 		  		} else {
-		  			// console.log("coming else : ", n);
-		  			outern = n - 1;
 		  			resolve(n-1); 
 		  		}
-	  		}.bind(this), interval) 
+	  		}.bind(this), interval/3) 
 	    }).then(function (result) {
 	    	res = res + result;
 	    	if(result != 1) {
@@ -95,7 +72,7 @@
 	        	setTimeout(function(){
 	        		appendDiv(1);
 	        		revertDivs();
-	        	}, interval)
+	        	}, interval/3)
 	        	console.log("finished")
 	        }
 	        console.log('res:', res);
@@ -104,39 +81,61 @@
 	    });
   					
   	}
-  	findSumOfNaturalNumbers(N);
-
+  	// findSumOfNaturalNumbers(N);
+  	var findSumOfNaturalNumbersBtn = function() {
+  		N = $(".s-rec-input-dropdown").val();
+  		findSumOfNaturalNumbers(N);
+  	}
   </script>
 
 </head>
 <body class = "s-common-tab-div-content">
-<h3 style = "text-align: center;">Simulations</h3>
-
+<h3 style = "text-align: center;" class = "s-simulations-heading">Simulations</h3>
 
 <div class = "row">
-	<h5>Understand recursion (sum of n natural numbers):</h5>
+	<h5 style = "font-size: 18px;">Understand recursion (sum of n natural numbers):</h5>
 	<div class = "s-rec-simulation-container">
-		<div class = "s-rec-call-code">
-			Code: <br>
-
-			<p class = "s-code-line">var findSumOfNaturalNumbers = function(n) { </p>
-		  		<p class = "s-code-line">if(n == 1) { </p>
-		  			<p class = "s-code-line">return 1; </p>
-		  		<p class = "s-code-line">} else {</p>
-		  			<p class = "s-code-line">return findSumOfNaturalNumbers(n-1) + n; </p>
-		  		<p class = "s-code-line">} </p>
-		  	}
+		<div class = "s-rec-call-code-outer">
+			<h4 class = "s-rec-block-heading">Code</h4>
+			<div class = "s-rec-call-code">
+				<p class = "s-code-line">var findSumOfNaturalNumbers = function(n) { </p>
+			  		<p class = "s-code-line" style = "padding-left:10px;">if(n == 1) { //base case</p>
+			  			<p class = "s-code-line" style = "padding-left:20px;">return 1; </p>
+			  		<p class = "s-code-line" style = "padding-left:10px;">} else {</p>
+			  			<p class = "s-code-line" style = "padding-left:20px;">return <span class = "s-rec-func">findSumOfNaturalNumbers(n-1)</span> + n; </p>
+			  		<p class = "s-code-line" style = "padding-left:10px;">} </p>
+			  	<p class = "s-code-line">}</p>
+			</div>
 		</div>
-		<div class = "s-rec-call-stack">
-		
+		<div class = "s-rec-call-stack-outer">
+			<h4 class = "s-rec-block-heading">Call stack</h4>
+			<div class = "s-rec-call-stack">
+			
+			</div>
 		</div>
-		<h6>Final result: <span class = "s-rec-result"></span></h6>
+		<div class = "s-rec-call-stack-outer">
+			<h4  class = "s-rec-block-heading">Interact</h4 >
+			<div class = "s-rec-interact">
+				<select class = "s-rec-input-dropdown">
+					<%for(var i = 2; i <= 10; i++) {%>
+						<option value = <%= i%> > <%= i%>
+						</option>
+					<%}%>
+				</select>
+				<a class="waves-effect waves-light btn-large s-run-btn" 
+				   href="#"
+				   onclick = "findSumOfNaturalNumbersBtn()">
+					Run
+				</a>
+				<h6>Final result: <span class = "s-rec-result"></span></h6>
+			</div>
+		</div>
 	</div>
 
 </div>
 
 <div class = "row s-log-outer-container" style = "margin-bottom: 40px;">
-	
+	<h5 style = "font-size: 18px; margin-top: 40px;">Understand exponentiation and logarithm:</h5>
 	<h6 class = "s-log-inner-heading">Exponential <sub> base 2</sub></h6>
 	<div class = "row s-log-inner-container">
 	  <div class = "s-log-each-row s-log-each-row-1" style = "width: 8px;">
