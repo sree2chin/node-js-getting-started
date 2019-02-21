@@ -73,6 +73,13 @@ footer.page-footer {
   -o-transition: all 0.5s linear;
   transform: scale(1, 1);
 }
+
+.s-link {
+  padding-right: 10px;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
 .s-unrequited {
     color: #4f4f53;
     font-size: 20px;
@@ -90,8 +97,8 @@ footer.page-footer {
 }
 
 .s-common-tab-div-content {
-  padding-left: 10%;
-  padding-right: 10%;
+  /*padding-left: 10%;
+  padding-right: 10%;*/
   padding-left: 10%;
   margin-top: 20px;
   background: #f9f9f9;
@@ -224,15 +231,6 @@ footer.page-footer {
   transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
   box-shadow: 1px 2px 3px 1px #eee;
 }
-#test-swipe-2 .light:hover {
-  -webkit-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
-  -moz-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
-  -ms-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
-  -o-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
-  transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
-  box-shadow: 1px 1px 8px 1px #eee;
-  transform: scale(1.1,1.1);
-}
 
 .s-clickable-image {
     height: 40px;
@@ -314,6 +312,27 @@ footer.page-footer {
     .s-log-outer-container {
       display: none;
     }
+    .s-common-tab-div-content {
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+}
+
+
+@media only screen and (min-width: 720px) {
+  .s-common-tab-div-content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #test-swipe-2 .light:hover {
+    -webkit-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
+    -moz-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
+    -ms-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
+    -o-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
+    transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
+    box-shadow: 1px 1px 8px 1px #eee;
+    transform: scale(1.1,1.1);
+  }
 }
 
 .s-dynamic-image {
@@ -471,6 +490,7 @@ path {
     fill: #1b5384;
     font-weight: 600;
 }
+
 /* old css .. should remove a lot */
 
 /*Should be moved to another file*/
