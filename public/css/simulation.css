@@ -9,7 +9,7 @@
     display: flex;
     background: #85929f;
     padding: 10px;
-    width: auto;
+    width: fit-content;
 }
 .s-code-line {
 	line-height: 8px;

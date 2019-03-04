@@ -62,6 +62,69 @@ footer.page-footer {
   margin: 0;
 }
 
+/* new */
+body {
+  font-family: sans-serif;
+}
+.s-links-outer-cont {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.s-simulations-cont {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+h4 {
+  margin-top: 70px;
+  margin-bottom: 30px
+}
+.s-common-tab {
+  list-style: none;
+  color: #4f5e69;
+  padding: 0px 10px 0px 10px;
+}
+.s-common-tab > div {
+  cursor: pointer;
+}
+
+.s-common-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.s-common-portfolio .card {
+  /* width: calc(50% - 10px); */
+  background: #353565;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  color: white;
+  box-shadow: 4px 4px 8px 1px #c5c6d2;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header-selected {
+  color: #2e3031;
+}
+
+.white-text p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card-action a {
+  color: #c3c3e5;
+}
+/* new end*/
 .s-minimize {
   transform: scale(0.5, 0.5);
 }
@@ -102,9 +165,11 @@ footer.page-footer {
   padding-left: 10%;
   margin-top: 20px;
   background: #f9f9f9;
+  margin: 0 auto;
+  max-width: 800px;
 }
 .s-image {
-  width: auto !important;
+  /* width: auto !important; */
   max-height: 600px;
   display:block;
   border-left: solid 20px #5d5656;
@@ -209,15 +274,27 @@ footer.page-footer {
 
 #tabs-swipe-demo {
   border-bottom: solid 1px #ededf5;
-    /*background-color: #eeeef5;*/
-    box-shadow: 1px 1px 6px 0px #eee;
-  position: fixed;
+  /*background-color: #eeeef5;*/
+  box-shadow: 1px 1px 6px 0px #eee;
+  /* position: fixed; */
   top: 0px;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+  background: white;
+  margin-top: 0px;
+  padding: 16px 20px 16px 60px;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 .s-main-carousel-container .tabs-content .carousel-item {
   background: #f9f9f9;
+}
+
+#test-swipe-4 iframe {
+  width: 100%;
 }
 
 #test-swipe-2 .light {
@@ -315,6 +392,23 @@ footer.page-footer {
     .s-common-tab-div-content {
       padding-left: 2%;
       padding-right: 2%;
+      
+    }
+    .s-common-tab-whoami {
+      display:block;
+    }
+    
+    .s-common-tab-div-content > .m4 {
+      width: 100%;
+    }
+    .s-common-tab-div-content > .m8 {
+      width: 100%;
+    }
+    .s-image {
+      width: calc(100% - 40px) !important;
+    }
+    .s-common-portfolio .card {
+      width: 100%;
     }
 }
 
@@ -324,6 +418,22 @@ footer.page-footer {
     padding-left: 10%;
     padding-right: 10%;
   }
+  .s-common-tab-whoami {
+    display: flex;
+  }
+  .s-common-tab-div-content > .m4 {
+    width: 20%;
+    padding-right: 20px;
+  }
+  .s-common-tab-div-content > .m8 {
+    width: 80%;
+  }
+  .s-image {
+    width: auto;
+  }
+  .s-common-portfolio .card {
+    width: calc(50% - 10px);
+  }
   #test-swipe-2 .light:hover {
     -webkit-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
     -moz-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
@@ -332,6 +442,9 @@ footer.page-footer {
     transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
     box-shadow: 1px 1px 8px 1px #eee;
     transform: scale(1.1,1.1);
+  }
+  .s-common-tab > div:hover {
+    color: #75758d;
   }
 }
 
@@ -499,9 +612,11 @@ path {
         /*color: #404040;*/
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        margin: 0;
+        padding: 0;
       }
       .row {
-        margin: 0px;
+        /* margin: 0px; */
       }
       .mainOuterContainer {
         display: none;
@@ -726,23 +841,25 @@ path {
       .homePageContentHaves {
         padding-top: 18px;
         text-align: center;
-          color: #516263;;
-          font-size: 17px;
+        color: #516263;;
+        font-size: 17px;
+        display: flex;
+        justify-content: space-evenly;
       }
       .homePageContentInfo {
           background: #F1F1FA;
-          min-height: 100%;
           margin-top: 15px;
           border-left: solid 3px #516263;;
           padding: 10px;
       }
       .homePageContentRow {
-        padding-top: 10px;
+        margin-bottom: 20px;
       }
       .homePageSideHeading {
         color: #8c8c8c;
         font-weight: bold;
         padding: 0;
+        margin-bottom: 5px;
       }
       .homePageValue {
         color: #8c8c8c;

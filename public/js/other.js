@@ -30,7 +30,7 @@ var i = 1;
 
 $('.s-dynamic-image2').addClass("s-clickable-image-dum");
 
-$( document ).ready(function() {
+var initArtsEvents = function() {
 	setTimeout(function(){
 		var imagesListLength = imagesList.length;
 	     //Equivalent: $(document.createElement('img'))
@@ -38,7 +38,7 @@ $( document ).ready(function() {
 	    for(var i = 0; i < imagesListLength; i++) {
 	    	var img = $('<img class = "s-clickable-image">');
 	    	img.attr('src', imagesList[i]);
-			img.appendTo('.s-grid-inner-container');
+				img.appendTo('.s-grid-inner-container');
 	    }
 	    $(document).on("click",".s-clickable-image",function() {
 	    	var tempCurrentImage = currentImage;
@@ -64,8 +64,6 @@ $( document ).ready(function() {
 
 		    		currentImage = tempCurrentImage2;
 		    	},250)
-		    	
-		    	
 		    	// setTimeout(function(){
 		    	// 	$('.s-dynamic-image').attr("src", newSrc);
 		    	// 	$('.s-dynamic-image').removeClass("s-clickable-image-close");
@@ -99,5 +97,60 @@ $( document ).ready(function() {
 			}, 100)
 		}, 0)
 	});
-
+}
+$( document ).ready(function() {
+	initArtsEvents();
 });
+
+(function($){
+  $(function(){ 
+
+    // $('.button-collapse').sideNav();
+    
+    // // Swipeable Tabs Demo Init
+    // if ($('#tabs-swipe-demo').length) {
+    //   $('#tabs-swipe-demo').tabs({ 'swipeable': false });
+    // }
+    // $(document).ready(function(){
+    //   $('.s-img-carousel').carousel();
+    // });
+
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
+
+var selectHeaderCss = function() {
+	var selectedClassElement = window.location.pathname.split("/")[1];
+	selectedClassElement = selectedClassElement ? selectedClassElement : "arts";
+	$('.s-common-tab').removeClass("header-selected");
+	$('.'+selectedClassElement).addClass("header-selected");
+}
+
+/*************  history changes ***************/
+let contentDiv = document.getElementById('s-main-content-render');
+
+let routes = {
+	'/': arts,
+	'/arts': arts,
+  '/writes': writes,
+  '/whoami': whoami,
+  '/tosolve': tosolve,
+  '/portfolio': portfolio,
+};
+
+contentDiv.innerHTML = routes[window.location.pathname];
+selectHeaderCss();
+
+window.onpopstate = () => {
+	contentDiv.innerHTML = routes[window.location.pathname];
+	window.location.pathname == "/arts" && initArtsEvents();
+	selectHeaderCss();
+}
+
+let changeUrlAndContent = (pathName) => {
+  window.history.pushState({}, pathName, window.location.origin + pathName);
+	contentDiv.innerHTML = routes[pathName];
+	pathName == "/arts" && initArtsEvents();
+	selectHeaderCss();
+}
+
+/*************  end history changes ***************/

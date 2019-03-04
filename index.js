@@ -17,8 +17,21 @@ app.get('/simulations', function(request, response) {
   response.render('pages/simulations');
 });
 
-app.get('/art', function(request, response) {
-  response.render('pages/art');
+app.get('/arts', function(request, response) {
+  response.render('pages/index');
+});
+
+app.get('/writes', function(request, response) {
+  response.render('pages/index');
+});
+app.get('/whoami', function(request, response) {
+  response.render('pages/index');
+});
+app.get('/tosolve', function(request, response) {
+  response.render('pages/index');
+});
+app.get('/portfolio', function(request, response) {
+  response.render('pages/index');
 });
 
 app.listen(app.get('port'), function() {
