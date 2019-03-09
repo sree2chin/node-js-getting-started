@@ -123,18 +123,23 @@ var selectHeaderCss = function() {
 	selectedClassElement = selectedClassElement ? selectedClassElement : "arts";
 	$('.s-common-tab').removeClass("header-selected");
 	$('.'+selectedClassElement).addClass("header-selected");
+	setTimeout(function() {
+		if (selectedClassElement == "writes" && window.location.hash) {
+			$(window).scrollTop($(window.location.hash).offset().top - 80);
+		}
+	}, 100);
 }
 
 /*************  history changes ***************/
 let contentDiv = document.getElementById('s-main-content-render');
 
 let routes = {
-	'/': arts,
+	'/': arts,	
 	'/arts': arts,
-  '/writes': writes,
-  '/whoami': whoami,
-  '/tosolve': tosolve,
-  '/portfolio': portfolio,
+  	'/writes': writes,
+  	'/whoami': whoami,
+  	'/tosolve': tosolve,
+  	'/portfolio': portfolio,
 };
 
 contentDiv.innerHTML = routes[window.location.pathname];
