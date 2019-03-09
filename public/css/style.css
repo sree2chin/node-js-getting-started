@@ -114,6 +114,7 @@ h4 {
 
 .header-selected {
   color: #111111;
+  border-bottom: solid 1px #111111;
 }
 
 .white-text p {
