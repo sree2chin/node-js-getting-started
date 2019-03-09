@@ -33,6 +33,13 @@ app.get('/tosolve', function(request, response) {
 app.get('/portfolio', function(request, response) {
   response.render('pages/index');
 });
+app.get('/resume', function(request, response) {
+  response.render('pages/index');
+});
+
+app.get('/srikanth_resume', function(req, res) {
+  res.sendFile(__dirname + "/public/pdf/srikanth_resume.pdf");
+})
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
