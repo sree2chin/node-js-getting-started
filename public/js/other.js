@@ -21,7 +21,8 @@ var imagesList = [
 	"http://i64.tinypic.com/2010pw9.jpg",
 	"http://i66.tinypic.com/9qw9sm.jpg",
 	"http://i64.tinypic.com/35lgnqa.jpg",
-	"http://i65.tinypic.com/aoomr6.jpg"
+	"http://i65.tinypic.com/aoomr6.jpg",
+	"http://i64.tinypic.com/313hseh.jpg"
 ]
 
 var currentImage = "s-dynamic-image";

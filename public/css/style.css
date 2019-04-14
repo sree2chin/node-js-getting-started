@@ -173,10 +173,6 @@ h4 {
   /* width: auto !important; */
   max-height: 600px;
   display:block;
-  border-left: solid 20px #5d5656;
-  border-top: solid 20px #524c4c;
-  border-right: solid 20px #443f3f;
-  border-bottom: solid 20px #4a4646;
   margin: 20px auto;
 }
 
@@ -406,10 +402,16 @@ h4 {
       width: 100%;
     }
     .s-image {
-      width: calc(100% - 40px) !important;
+      width: calc(100% - 20px) !important;
     }
     .s-common-portfolio .card {
       width: 100%;
+    }
+    .s-image {
+      border-left: solid 10px #5d5656;
+      border-top: solid 10px #524c4c;
+      border-right: solid 10px #443f3f;
+      border-bottom: solid 10px #4a4646;
     }
 }
 
@@ -446,6 +448,12 @@ h4 {
   }
   .s-common-tab > div:hover {
     color: #75758d;
+  }
+  .s-image {
+    border-left: solid 20px #5d5656;
+    border-top: solid 20px #524c4c;
+    border-right: solid 20px #443f3f;
+    border-bottom: solid 20px #4a4646;
   }
 }
 
