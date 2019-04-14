@@ -14,93 +14,91 @@
 
 
 </head>
-<body>
-  
-  <div class = "s-main-carousel-container"> 
-    <div class = "s-links-outer-cont">
-      <ul id="tabs-swipe-demo" class="tabs" style = "text-align: center;">
-        <li class="tab col s3 s-common-tab arts">
-          <div onclick="changeUrlAndContent('/arts')">ARTS</div>
-          <!-- <a class="active" href="#test-swipe-1">
-            <div class="wrap">
-              <div class="cube">
-                <div class="front">
-                  <img src = "http://i64.tinypic.com/zn9b9j.jpg" 
-                      class="responsive-img" 
-                      alt="Kate" >
+  <body>
+    <div class = "s-main-carousel-container"> 
+      <div class = "s-links-outer-cont">
+        <ul id="tabs-swipe-demo" class="tabs" style = "text-align: center;">
+          <li class="tab col s3 s-common-tab arts">
+            <div onclick="changeUrlAndContent('/arts')">ARTS</div>
+            <!-- <a class="active" href="#test-swipe-1">
+              <div class="wrap">
+                <div class="cube">
+                  <div class="front">
+                    <img src = "http://i64.tinypic.com/zn9b9j.jpg" 
+                        class="responsive-img" 
+                        alt="Kate" >
+                  </div>
+                  <div class="back">
+                    
+                  </div>
+                  <div class="top">
+                    
+                  </div>
+                  <div class="bottom">
+                    
+                  </div>
+                  <div class="left">
+                    <img src = "http://i65.tinypic.com/2usj2f8.jpg" 
+                        class="responsive-img" 
+                        alt="images" >
+                  </div>
+                  <div class="right"></div>
                 </div>
-                <div class="back">
-                  
-                </div>
-                <div class="top">
-                  
-                </div>
-                <div class="bottom">
-                  
-                </div>
-                <div class="left">
-                  <img src = "http://i65.tinypic.com/2usj2f8.jpg" 
-                      class="responsive-img" 
-                      alt="images" >
-                </div>
-                <div class="right"></div>
               </div>
-            </div>
-          </a> -->
-        </li>
-        <li class="tab col s3 s-common-tab writes">
-          <div onclick="changeUrlAndContent('/writes')">Writes</div>
-        </li>
-        <li class="tab col s3 s-common-tab whoami">
-          <div onclick="changeUrlAndContent('/whoami')">Who Am I</div>
-        </li>
-        <!-- <li class="tab col s3 s-common-tab"><a href="#test-swipe-4">Resume</a></li> -->
-        <li class="tab col s3 s-common-tab s-to-solve-tab tosolve">
-          <div onclick="changeUrlAndContent('/tosolve')">To solve</div>
-        </li>
-        <li class="tab col s3 s-common-tab s-portfolio-tab portfolio">
-          <div onclick="changeUrlAndContent('/portfolio')">Portfolio</div>
-        </li>
-        <li class="tab col s3 s-common-tab resume">
-          <div onclick="changeUrlAndContent('/resume')">Resume</div>
-        </li>
-      </ul>
+            </a> -->
+          </li>
+          <li class="tab col s3 s-common-tab writes">
+            <div onclick="changeUrlAndContent('/writes')">Writes</div>
+          </li>
+          <li class="tab col s3 s-common-tab whoami">
+            <div onclick="changeUrlAndContent('/whoami')">Who Am I</div>
+          </li>
+          <!-- <li class="tab col s3 s-common-tab"><a href="#test-swipe-4">Resume</a></li> -->
+          <li class="tab col s3 s-common-tab s-to-solve-tab tosolve">
+            <div onclick="changeUrlAndContent('/tosolve')">To solve</div>
+          </li>
+          <li class="tab col s3 s-common-tab s-portfolio-tab portfolio">
+            <div onclick="changeUrlAndContent('/portfolio')">Portfolio</div>
+          </li>
+          <li class="tab col s3 s-common-tab resume">
+            <div onclick="changeUrlAndContent('/resume')">Resume</div>
+          </li>
+        </ul>
+      </div>
+      <div id = "s-main-content-render">
+        <!-- dynamic content goes here-->
+      </div>
     </div>
-    <div id = "s-main-content-render">
-      <!-- dynamic content goes here-->
-    </div>
-  </div>
 
-  <script>
-    var arts = `<div id="test-swipe-1" class="col s12 s-main-container" style = "width:100%;">
-        <% include partials/_arts %>
-    </div>`;
-    var writes = `<div id="test-swipe-2" class="col s12 s-main-container" style = "width:100%;">  
-      <% include partials/_writes %>  
-    </div>`;
-    var whoami = `<div id="test-swipe-3" class="col s12 s-main-container" style = "width:100%;">
-      <% include partials/whoami %>
-    </div>`;
-    var tosolve = `<div id="test-swipe-4" class="col s12 s-main-container" style = "width:100%;">
-      <% include partials/tosolve %>
-    </div>`;
-    var portfolio = `<div id="test-swipe-5" class="col s12 s-main-container" style = "width:100%;">
-      <% include partials/_portfolio %>
-    </div>`;
-    var resume = `<div id="test-swipe-6" class="col s12 s-main-container" style = "width:100%;">
-      <% include partials/_resume %>
-    </div>`;
-  </script>
+    <script>
+      var arts = `<div id="test-swipe-1" class="col s12 s-main-container" style = "width:100%;">
+          <% include partials/_arts %>
+      </div>`;
+      var writes = `<div id="test-swipe-2" class="col s12 s-main-container" style = "width:100%;">  
+        <% include partials/_writes %>  
+      </div>`;
+      var whoami = `<div id="test-swipe-3" class="col s12 s-main-container" style = "width:100%;">
+        <% include partials/whoami %>
+      </div>`;
+      var tosolve = `<div id="test-swipe-4" class="col s12 s-main-container" style = "width:100%;">
+        <% include partials/tosolve %>
+      </div>`;
+      var portfolio = `<div id="test-swipe-5" class="col s12 s-main-container" style = "width:100%;">
+        <% include partials/_portfolio %>
+      </div>`;
+      var resume = `<div id="test-swipe-6" class="col s12 s-main-container" style = "width:100%;">
+        <% include partials/_resume %>
+      </div>`;
+    </script>
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- <script src="js/materialize.js"></script> -->
-  <!-- <script src="js/init.js"></script> -->
-  <script src="js/other.js"></script>
-  <!-- load the d3.js library -->    
-  <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
-  <!-- <script src="js/d3Code.js"></script> -->
-
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- <script src="js/materialize.js"></script> -->
+    <!-- <script src="js/init.js"></script> -->
+    <script src="js/other.js"></script>
+    <!-- load the d3.js library -->    
+    <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+    <!-- <script src="js/d3Code.js"></script> -->
   </body>
 </html>
 

@@ -17,6 +17,10 @@ app.get('/simulations', function(request, response) {
   response.render('pages/simulations');
 });
 
+app.get('/writes/unexpected-journey', function(request, response) {
+  response.render('pages/unexpected_journey');
+});
+
 app.get('/arts', function(request, response) {
   response.render('pages/index');
 });
