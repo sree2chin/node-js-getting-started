@@ -21,6 +21,10 @@ app.get('/writes/unexpected-journey', function(request, response) {
   response.render('pages/unexpected_journey');
 });
 
+app.get('/writes/ayn-rand-atlas-shrugged-review', function(request, response) {
+  response.render('pages/ayn_rand_atlas_shrugged');
+});
+
 app.get('/arts', function(request, response) {
   response.render('pages/index');
 });
