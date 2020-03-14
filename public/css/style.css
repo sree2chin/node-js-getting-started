@@ -656,7 +656,11 @@ path {
       }
       .myImageContainer {
         width: 100%;
-        /*margin-top: 15px !important;*/
+        margin: 0 auto;
+        width: 75%;
+        display: block;
+        margin-bottom: 20px;
+        margin-top: 10px;
       }
       .sampleContainer {
         border: solid 1px #4682b4;
