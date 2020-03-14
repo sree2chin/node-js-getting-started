@@ -25,6 +25,10 @@ app.get('/writes/ayn-rand-atlas-shrugged-review', function(request, response) {
   response.render('pages/ayn_rand_atlas_shrugged');
 });
 
+app.get('/writes/psyche', function(request, response) {
+  response.render('pages/psyche');
+});
+
 app.get('/arts', function(request, response) {
   response.render('pages/index');
 });
