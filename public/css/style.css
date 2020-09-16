@@ -413,6 +413,9 @@ h4 {
       border-right: solid 10px #443f3f;
       border-bottom: solid 10px #4a4646;
     }
+    .s-certificate {
+      width: 100%;
+    }
 }
 
 
@@ -454,6 +457,9 @@ h4 {
     border-top: solid 20px #524c4c;
     border-right: solid 20px #443f3f;
     border-bottom: solid 20px #4a4646;
+  }
+  .s-certificate {
+    width: 50%;
   }
 }
 
