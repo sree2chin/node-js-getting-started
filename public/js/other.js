@@ -28,8 +28,6 @@ var currentImage = "s-dynamic-image";
 
 var i = 1;
 
-$('.s-dynamic-image2').addClass("s-clickable-image-dum");
-
 var initArtsEvents = function() {
 	setTimeout(function(){
 		var imagesListLength = imagesList.length;
@@ -40,6 +38,7 @@ var initArtsEvents = function() {
 	    	img.attr('src', imagesList[i]);
 				img.appendTo('.s-grid-inner-container');
 	    }
+      $('.s-dynamic-image2').addClass("s-clickable-image-dum");
 	    $(document).on("click",".s-clickable-image",function() {
 	    	var tempCurrentImage = currentImage;
 	    	var tempCurrentImage2 = currentImage == "s-dynamic-image" ? "s-dynamic-image2" : "s-dynamic-image";
@@ -136,11 +135,11 @@ let contentDiv = document.getElementById('s-main-content-render');
 let routes = {
 	'/': arts,	
 	'/arts': arts,
-  	'/writes': writes,
-  	'/whoami': whoami,
-  	'/tosolve': tosolve,
-  	'/portfolio': portfolio,
-  	'/resume': resume,
+  '/writes': writes,
+  '/whoami': whoami,
+  '/tosolve': tosolve,
+  '/portfolio': portfolio,
+  '/resume': resume,
 };
 
 contentDiv.innerHTML = routes[window.location.pathname];
