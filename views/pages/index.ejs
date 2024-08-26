@@ -33,9 +33,12 @@
           <li class="tab col s3 s-common-tab s-portfolio-tab portfolio">
             <div onclick="changeUrlAndContent('/portfolio')">Portfolio</div>
           </li>
-          <li class="tab col s3 s-common-tab resume">
-            <div onclick="changeUrlAndContent('/resume')">Resume</div>
+          <li class="tab col s3 s-common-tab s-travel-tab travel">
+            <div onclick="changeUrlAndContent('/travel')">Travel</div>
           </li>
+          <!-- <li class="tab col s3 s-common-tab resume">
+            <div onclick="changeUrlAndContent('/resume')">Resume</div>
+          </li> -->
         </ul>
       </div>
       <div id = "s-main-content-render">
@@ -61,6 +64,9 @@
       </div>`;
       var resume = `<div id="test-swipe-6" class="col s12 s-main-container" style = "width:100%;">
         <% include partials/_resume %>
+      </div>`;
+      var travel = `<div id="test-swipe-6" class="col s12 s-main-container" style = "width:100%;">
+        <% include partials/_travel %>
       </div>`;
     </script>
 

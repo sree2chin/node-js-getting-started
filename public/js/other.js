@@ -140,6 +140,7 @@ let routes = {
   '/tosolve': tosolve,
   '/portfolio': portfolio,
   '/resume': resume,
+  '/travel': travel,
 };
 
 contentDiv.innerHTML = routes[window.location.pathname];

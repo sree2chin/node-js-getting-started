@@ -39,9 +39,15 @@ app.get('/writes', function(request, response) {
 app.get('/whoami', function(request, response) {
   response.render('pages/index');
 });
-app.get('/tosolve', function(request, response) {
+
+app.get('/travel', function(request, response) {
   response.render('pages/index');
 });
+
+
+// app.get('/tosolve', function(request, response) {
+//   response.render('pages/index');
+// });
 app.get('/portfolio', function(request, response) {
   response.render('pages/index');
 });

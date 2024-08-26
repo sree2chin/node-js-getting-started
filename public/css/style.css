@@ -344,11 +344,6 @@ h4 {
     transform-origin: left;
 }
 
-.s-clickable-image-close-new {
-    transform: perspective(1000px) rotateY(-90deg);
-    transform-origin: left;
-}
-
 .s-clickable-image-dum {
     transform: perspective(1000px) rotateY(90deg) !important;
 }
@@ -415,6 +410,7 @@ h4 {
     }
     .s-certificate {
       width: 100%;
+      margin-bottom: 12px;
     }
 }
 
@@ -459,7 +455,8 @@ h4 {
     border-bottom: solid 20px #4a4646;
   }
   .s-certificate {
-    width: 50%;
+    width: 70%;
+    margin-bottom: 12px;
   }
 }
 
